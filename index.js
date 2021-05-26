@@ -52,8 +52,11 @@ async function insertItem() {
     }),
   })
     .then((res) => res.json())
-    .then((data) => console.log(`insert done successfully, ${JSON.stringify(data)}`));
+    .then((data) =>
+      console.log(`insert done successfully, ${JSON.stringify(data)}`)
+    );
 
+  // solution 2 - Using Async/await
   try {
     const insertedItem = await fetch(
       'https://jsonplaceholder.typicode.com/todos',
@@ -77,6 +80,6 @@ async function insertItem() {
   }
 }
 
-// getAll();
-// getUserById(8);
+getAll();
+getUserById(20);
 insertItem();
